@@ -12,7 +12,7 @@ ENV USER_EMAIL "pgarrett@example.com"
 ENV ACCESS_CONTROL "access to * by * read"
 ENV LOG_LEVEL "stats"
 
-RUN apk add --update openldap openldap-back-mdb && \
+RUN apk add --update openldap openldap-back-mdb openldap-passwd-argon2 && \
     mkdir -p /run/openldap /var/lib/openldap/openldap-data && \
     rm -rf /var/cache/apk/*
 
