@@ -67,7 +67,7 @@ sed -i "s~%SUFFIX%~$SUFFIX~g" "$USER_CONF"
 sed -i "s~%USER_UID%~$USER_UID~g" "$USER_CONF"
 sed -i "s~%USER_GIVEN_NAME%~$USER_GIVEN_NAME~g" "$USER_CONF"
 sed -i "s~%USER_SURNAME%~$USER_SURNAME~g" "$USER_CONF"
-if [ -z "$USER_PW" ]; then USER_PW="{PLAIN}password"; fi
+if [ -z "$USER_PW" ]; then USER_PW="{CLEARTEXT}password"; fi
 sed -i "s~%USER_PW%~$USER_PW~g" "$USER_CONF"
 sed -i "s~%USER_EMAIL%~$USER_EMAIL~g" "$USER_CONF"
 
